@@ -42,6 +42,25 @@ Folder to Copy AccessControl.plist
 /kodokomento/Kodokomento/Resources/Properties
 ```
 
+### QRCode Creation
+
+For create a Gist QRCode, use that value:
+
+```
+kodokomento://?gist={{Gist Id}}
+```
+
+Ex.
+
+```
+GistUrl: https://gist.github.com/rodolfohelfenstein/5dd8a4fa8a3d516529206e02811b031e
+
+Get Gist Id in URL and replace:
+
+QRCode Value: kodokomento://?gist=5dd8a4fa8a3d516529206e02811b031e
+
+```
+
 ### Coding Style
 
 Project using SwiftLint
