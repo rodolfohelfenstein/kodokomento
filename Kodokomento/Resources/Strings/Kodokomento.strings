@@ -1,0 +1,22 @@
+/* 
+  Kodokomento.strings
+  Kodokomento
+
+  Created by Rodolfo Helfenstein Bulgam on 08/08/18.
+  Copyright © 2018 Helfens Studios. All rights reserved.
+*/
+
+// MARK: Scanner Module Strings
+
+"cameraPermissionNotDeterminedBody" = "Kodokomento needs\ncamera access to scan QRCode...\n\n\nPress button below to grant access";
+"cameraPermissionNotDeterminedButton" = "GRANT PERMISSION";
+"cameraPermissionDeniedBody" = "Kodokomento needs\ncamera access to scan QRCode...\n\n\nPress button above and enable";
+"cameraPermissionDeniedButton" = "ACCESS SETTINGS";
+
+// MARK: Gist Detail Strings
+
+"commentsButtonText" = "%d COMMENTS";
+"emptyCommentsButtonText" = "BE FIRST TO COMMENT!";
+"gistNotFoundAlertTitle" = "Gist Not Found!";
+"gistNotFoundAlertBody" = "This QRCode is not a Gist and/or Gist no exists anymore";
+"gistNotFoundAlertAction" = "Ok";

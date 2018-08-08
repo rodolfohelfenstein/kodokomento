@@ -1,0 +1,32 @@
+PODS:
+  - Kingfisher (4.8.0)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
+  - SwiftIcons (2.0.1)
+  - SwiftLint (0.26.0)
+
+DEPENDENCIES:
+  - Kingfisher
+  - R.swift
+  - SwiftIcons
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Kingfisher
+    - R.swift
+    - R.swift.Library
+    - SwiftIcons
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  SwiftIcons: e475a56ae2c2da40672dbf16061ca5dd5cee7dbb
+  SwiftLint: f6b83e8d95ee1e91e11932d843af4fdcbf3fc764
+
+PODFILE CHECKSUM: 695efccf6d0cdf1cd022dabe6addc613b80071ef
+
+COCOAPODS: 1.5.3

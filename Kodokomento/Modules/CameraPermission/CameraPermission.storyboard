@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="km4-Z3-Sg2">
+            <objects>
+                <navigationController storyboardIdentifier="root" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YEo-ne-65J" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eRr-A5-OgX">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c4K-D8-z1I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-525" y="239"/>
+        </scene>
+        <!--Camera Permission View Controller-->
+        <scene sceneID="Dc8-sf-fdc">
+            <objects>
+                <viewController storyboardIdentifier="main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="egx-3z-ihR" customClass="CameraPermissionViewController" customModule="Kodokomento" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ayI-qs-iQQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r99-Qx-6kA">
+                                <rect key="frame" x="20" y="412" width="280" height="48"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="r99-Qx-6kA" secondAttribute="height" multiplier="35:6" id="yJ2-4y-Eyc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="GRANT PERMISSION">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="grantPermissionButtonTouched:" destination="egx-3z-ihR" eventType="touchUpInside" id="Syp-dW-d0Z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kodokomento needs  camera access to scan QRCode.  Press button above and enable" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fC-TX-XBg">
+                                <rect key="frame" x="20" y="240" width="280" height="81.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CameraPermissionIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pUZ-rl-TkA">
+                                <rect key="frame" x="96" y="80" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pUZ-rl-TkA" secondAttribute="height" multiplier="1:1" id="fkk-Oc-BsH"/>
+                                </constraints>
+                            </imageView>
+                            <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ykj-FE-t9A">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Qi5-kT-T3B">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="XXT-KB-9ig">
+                                            <rect key="frame" x="141.5" y="221.5" width="37" height="37"/>
+                                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="XXT-KB-9ig" firstAttribute="centerY" secondItem="Qi5-kT-T3B" secondAttribute="centerY" id="Kpf-bm-PL8"/>
+                                        <constraint firstItem="XXT-KB-9ig" firstAttribute="centerX" secondItem="Qi5-kT-T3B" secondAttribute="centerX" id="xd9-Dj-4kB"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7fC-TX-XBg" firstAttribute="top" secondItem="ayI-qs-iQQ" secondAttribute="centerY" id="8zE-Ac-qr4"/>
+                            <constraint firstItem="r99-Qx-6kA" firstAttribute="leading" secondItem="ayI-qs-iQQ" secondAttribute="leading" constant="20" id="GrM-gC-SdO"/>
+                            <constraint firstItem="ykj-FE-t9A" firstAttribute="trailing" secondItem="Xdl-Gw-sDW" secondAttribute="trailing" id="Hfd-wg-9C6"/>
+                            <constraint firstItem="7fC-TX-XBg" firstAttribute="centerX" secondItem="ayI-qs-iQQ" secondAttribute="centerX" id="KNn-Wc-s8D"/>
+                            <constraint firstItem="7fC-TX-XBg" firstAttribute="top" secondItem="pUZ-rl-TkA" secondAttribute="bottom" constant="32" id="WyH-ZI-Enl"/>
+                            <constraint firstItem="ykj-FE-t9A" firstAttribute="top" secondItem="ayI-qs-iQQ" secondAttribute="top" id="a6k-Ap-jtm"/>
+                            <constraint firstItem="ykj-FE-t9A" firstAttribute="leading" secondItem="Xdl-Gw-sDW" secondAttribute="leading" id="aBE-TY-Zkp"/>
+                            <constraint firstItem="ykj-FE-t9A" firstAttribute="bottom" secondItem="Xdl-Gw-sDW" secondAttribute="bottom" id="bWs-Ab-YuE"/>
+                            <constraint firstItem="r99-Qx-6kA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7fC-TX-XBg" secondAttribute="bottom" constant="20" id="buD-zY-nsX"/>
+                            <constraint firstAttribute="bottom" secondItem="r99-Qx-6kA" secondAttribute="bottom" constant="20" id="dKy-Mu-DwO"/>
+                            <constraint firstItem="7fC-TX-XBg" firstAttribute="leading" secondItem="ayI-qs-iQQ" secondAttribute="leading" constant="20" id="fYa-SM-X8B"/>
+                            <constraint firstAttribute="trailing" secondItem="7fC-TX-XBg" secondAttribute="trailing" constant="20" id="g1m-8D-sEv"/>
+                            <constraint firstItem="pUZ-rl-TkA" firstAttribute="leading" secondItem="ayI-qs-iQQ" secondAttribute="leading" constant="96" id="lsZ-zg-YWK"/>
+                            <constraint firstAttribute="trailing" secondItem="r99-Qx-6kA" secondAttribute="trailing" constant="20" id="ms7-mj-KYg"/>
+                            <constraint firstAttribute="trailing" secondItem="pUZ-rl-TkA" secondAttribute="trailing" constant="96" id="sHT-YJ-nlN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xdl-Gw-sDW"/>
+                    </view>
+                    <connections>
+                        <outlet property="body" destination="7fC-TX-XBg" id="cO0-j9-xNs"/>
+                        <outlet property="button" destination="r99-Qx-6kA" id="oYy-1y-yhl"/>
+                        <outlet property="loadingView" destination="ykj-FE-t9A" id="t6F-p1-sRd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gkV-OO-1Xl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="232.5" y="238.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CameraPermissionIcon" width="128" height="128"/>
+    </resources>
+</document>

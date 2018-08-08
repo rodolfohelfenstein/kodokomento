@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="G5X-sF-RVn">
+            <objects>
+                <navigationController storyboardIdentifier="root" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0JN-KJ-4vl" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="CCG-xh-iiC">
+                        <rect key="frame" x="0.0" y="20" width="320" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gw8-mf-gvY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-338" y="138"/>
+        </scene>
+        <!--Authentication-->
+        <scene sceneID="7Ih-Iz-bj9">
+            <objects>
+                <viewController storyboardIdentifier="main" title="Authentication" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QWB-Xs-5ML" customClass="AuthenticationViewController" customModule="Kodokomento" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0zn-cN-qF7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You must be logged in to post a comment  Click on button above to link your GitHub Account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjm-Bb-CpJ">
+                                <rect key="frame" x="20" y="209" width="280" height="62.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SORRY ;(" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzD-VR-WMJ">
+                                <rect key="frame" x="20" y="162.5" width="280" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PyQ-jQ-5Qf">
+                                <rect key="frame" x="62" y="303.5" width="196" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="PDI-7w-iQ8"/>
+                                    <constraint firstAttribute="width" constant="196" id="oNJ-uC-NXa"/>
+                                </constraints>
+                                <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="GitHubLinkAccountIcon">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Authorize with ">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                                <font key="NSOriginalFont" size="14" name=".AppleSystemUIFont"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="GitHub">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="14" name=".AppleSystemUIFontEmphasized"/>
+                                                <font key="NSOriginalFont" size="18" name=".AppleSystemUIFontEmphasized"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="authenticationButtonTouched:" destination="QWB-Xs-5ML" eventType="touchUpInside" id="F2O-FY-D7a"/>
+                                </connections>
+                            </button>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGM-jh-iZg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="f6J-wd-1zA">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Orj-Ui-yF2">
+                                            <rect key="frame" x="141.5" y="222" width="37" height="37"/>
+                                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Orj-Ui-yF2" firstAttribute="centerY" secondItem="f6J-wd-1zA" secondAttribute="centerY" id="o5f-Yu-HEY"/>
+                                        <constraint firstItem="Orj-Ui-yF2" firstAttribute="centerX" secondItem="f6J-wd-1zA" secondAttribute="centerX" id="yge-j8-bux"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uGM-jh-iZg" firstAttribute="top" secondItem="0zn-cN-qF7" secondAttribute="top" id="34f-NG-ZRd"/>
+                            <constraint firstItem="Pjm-Bb-CpJ" firstAttribute="top" secondItem="bzD-VR-WMJ" secondAttribute="bottom" constant="8" id="4oz-UT-ZXQ"/>
+                            <constraint firstItem="PyQ-jQ-5Qf" firstAttribute="centerX" secondItem="0zn-cN-qF7" secondAttribute="centerX" id="5Oj-MN-3vz"/>
+                            <constraint firstAttribute="trailing" secondItem="Pjm-Bb-CpJ" secondAttribute="trailing" constant="20" id="5lT-ZV-HYU"/>
+                            <constraint firstItem="uGM-jh-iZg" firstAttribute="leading" secondItem="R5x-2t-Sy9" secondAttribute="leading" id="6br-MR-S3q"/>
+                            <constraint firstItem="uGM-jh-iZg" firstAttribute="bottom" secondItem="R5x-2t-Sy9" secondAttribute="bottom" id="83Y-Yc-3Jb"/>
+                            <constraint firstItem="PyQ-jQ-5Qf" firstAttribute="top" secondItem="Pjm-Bb-CpJ" secondAttribute="bottom" constant="32" id="H9A-Qr-Zl1"/>
+                            <constraint firstItem="uGM-jh-iZg" firstAttribute="trailing" secondItem="R5x-2t-Sy9" secondAttribute="trailing" id="Jce-SD-yb1"/>
+                            <constraint firstItem="Pjm-Bb-CpJ" firstAttribute="leading" secondItem="R5x-2t-Sy9" secondAttribute="leading" constant="20" id="bLZ-sN-hvO"/>
+                            <constraint firstItem="R5x-2t-Sy9" firstAttribute="trailing" secondItem="bzD-VR-WMJ" secondAttribute="trailing" constant="20" id="qFL-YV-8JD"/>
+                            <constraint firstItem="bzD-VR-WMJ" firstAttribute="leading" secondItem="R5x-2t-Sy9" secondAttribute="leading" constant="20" id="qUH-FP-YWv"/>
+                            <constraint firstItem="Pjm-Bb-CpJ" firstAttribute="centerY" secondItem="0zn-cN-qF7" secondAttribute="centerY" id="xSU-GS-JJi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R5x-2t-Sy9"/>
+                    </view>
+                    <connections>
+                        <outlet property="loadingView" destination="uGM-jh-iZg" id="zBF-gB-zSZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SMx-c6-NmU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="435" y="137.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="GitHubLinkAccountIcon" width="32" height="32"/>
+    </resources>
+</document>
