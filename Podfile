@@ -8,7 +8,6 @@ target 'Kodokomento' do
   # Pods for Kodokomento
   pod 'Kingfisher'
   pod 'R.swift'
-  pod 'SwiftIcons'
   pod 'SwiftLint'
 
 end

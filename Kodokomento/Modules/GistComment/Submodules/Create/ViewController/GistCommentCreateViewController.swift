@@ -6,7 +6,6 @@
 //  Copyright © 2018 Helfens Studios. All rights reserved.
 //
 
-import SwiftIcons
 import UIKit
 
 class GistCommentCreateViewController: UIViewController {
