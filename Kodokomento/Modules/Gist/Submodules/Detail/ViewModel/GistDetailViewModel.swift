@@ -9,7 +9,6 @@
 import UIKit
 
 class GistDetailViewModel {
-
     // MARK: Delegates
 
     weak var viewDelegate: GistDetailViewModelViewDelegate?
@@ -63,21 +62,18 @@ class GistDetailViewModel {
     // MARK: View Properties
 
     var ownerAvatar: URL? {
-
         guard let gist = _gist else { return nil }
 
         return gist.owner.avatar
-
     }
 
     var ownerIdentifier: NSAttributedString? {
-
         guard let gist = _gist, let gistFile = gist.gistFile else { return nil }
 
         let text = "\(gist.owner.login) / \(gistFile.filename)"
         let attributedString = NSMutableAttributedString(string: text)
 
-        text.enumerateSubstrings(in: text.startIndex..<text.endIndex, options: .byWords) { (substring, substringRange, _, _) in
+        text.enumerateSubstrings(in: text.startIndex ..< text.endIndex, options: .byWords) { substring, substringRange, _, _ in
 
             if substring == "/" {
                 attributedString.addAttribute(.foregroundColor,
@@ -93,50 +89,38 @@ class GistDetailViewModel {
                                               range: NSRange(substringRange,
                                                              in: text))
             }
-
         }
 
         return attributedString
-
     }
 
     var gistCreationDate: String? {
-
         guard let gist = _gist else { return nil }
 
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM yyyy"
 
         return "Created in \(formatter.string(from: gist.createdAt))"
-
     }
 
     var gistFilename: String? {
-
         guard let gist = _gist, let gistFile = gist.gistFile else { return nil }
 
         return gistFile.filename
-
     }
 
     var gistBody: URL? {
-
         guard let gist = _gist, let gistFile = gist.gistFile else { return nil }
 
         return gistFile.rawUrl
-
     }
 
     var commentsCount: String? {
-
         return "COMMENTS (\(_gist?.commentsCount ?? 0))"
-
     }
-
 }
 
 extension GistDetailViewModel: GistDetailViewModelType {
-
     func viewDidLoad() {
         fetchGist()
     }

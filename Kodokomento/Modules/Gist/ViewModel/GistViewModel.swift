@@ -27,7 +27,6 @@ class GistViewModel {
 }
 
 extension GistViewModel: GistViewModelType {
-
     func viewWillAppear() {}
 
     func didScannerButtonTouched() {
@@ -42,10 +41,7 @@ extension GistViewModel: GistViewModelType {
     }
 
     func didUnautohrizeAlertButtonTouched() {
-
         LocalStorageHelper.accessToken = ""
         viewDelegate?.refreshAuthorizationButton()
-
     }
-
 }

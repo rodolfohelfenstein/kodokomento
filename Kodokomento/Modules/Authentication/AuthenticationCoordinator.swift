@@ -10,7 +10,6 @@ import Foundation
 import SafariServices
 
 class AuthenticationCoordinator: Coordinator {
-
     // MARK: Properties
 
     fileprivate weak var authenticationController: AuthenticationViewController?
@@ -26,7 +25,6 @@ class AuthenticationCoordinator: Coordinator {
     // MARK: Flows
 
     func showAuthentication() {
-
         guard let controller = R.storyboard.authentication.main() else {
             fatalError("AuthenticationViewController of Authentication.storyboard has not found.")
         }
@@ -38,13 +36,10 @@ class AuthenticationCoordinator: Coordinator {
                        hideBar: false)
 
         authenticationController = controller
-
     }
-
 }
 
 extension AuthenticationCoordinator: AuthenticationViewModelCoordinatorDelegate {
-
     func showSafariView(url: URL) {
         let controller = SFSafariViewController(url: url)
         controller.delegate = authenticationController
@@ -61,10 +56,7 @@ extension AuthenticationCoordinator: AuthenticationViewModelCoordinatorDelegate 
     }
 
     func authenticated(credential: Credential) {
-
         LocalStorageHelper.accessToken = credential.accessToken
         finish?(true)
-
     }
-
 }

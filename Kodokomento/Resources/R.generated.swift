@@ -9,419 +9,419 @@ import UIKit
 
 /// This `R` struct is generated and contains references to static resources.
 struct R: Rswift.Validatable {
-  fileprivate static let applicationLocale = hostingBundle.preferredLocalizations.first.flatMap(Locale.init) ?? Locale.current
-  fileprivate static let hostingBundle = Bundle(for: R.Class.self)
-  
-  static func validate() throws {
-    try intern.validate()
-  }
-  
-  /// This `R.color` struct is generated, and contains static references to 0 colors.
-  struct color {
+    fileprivate static let applicationLocale = hostingBundle.preferredLocalizations.first.flatMap(Locale.init) ?? Locale.current
+    fileprivate static let hostingBundle = Bundle(for: R.Class.self)
+
+    static func validate() throws {
+        try intern.validate()
+    }
+
+    /// This `R.color` struct is generated, and contains static references to 0 colors.
+    struct color {
+        fileprivate init() {}
+    }
+
+    /// This `R.file` struct is generated, and contains static references to 1 files.
+    struct file {
+        /// Resource file `AccessControl.plist`.
+        static let accessControlPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "AccessControl", pathExtension: "plist")
+
+        /// `bundle.url(forResource: "AccessControl", withExtension: "plist")`
+        static func accessControlPlist(_: Void = ()) -> Foundation.URL? {
+            let fileResource = R.file.accessControlPlist
+            return fileResource.bundle.url(forResource: fileResource)
+        }
+
+        fileprivate init() {}
+    }
+
+    /// This `R.font` struct is generated, and contains static references to 0 fonts.
+    struct font {
+        fileprivate init() {}
+    }
+
+    /// This `R.image` struct is generated, and contains static references to 5 images.
+    struct image {
+        /// Image `CameraPermissionIcon`.
+        static let cameraPermissionIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "CameraPermissionIcon")
+        /// Image `GitHubLinkAccountIcon`.
+        static let gitHubLinkAccountIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "GitHubLinkAccountIcon")
+        /// Image `HomeQRCodeIcon`.
+        static let homeQRCodeIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "HomeQRCodeIcon")
+        /// Image `LaunchImage`.
+        static let launchImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "LaunchImage")
+        /// Image `ScannerQRCodeIcon`.
+        static let scannerQRCodeIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "ScannerQRCodeIcon")
+
+        /// `UIImage(named: "CameraPermissionIcon", bundle: ..., traitCollection: ...)`
+        static func cameraPermissionIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+            return UIKit.UIImage(resource: R.image.cameraPermissionIcon, compatibleWith: traitCollection)
+        }
+
+        /// `UIImage(named: "GitHubLinkAccountIcon", bundle: ..., traitCollection: ...)`
+        static func gitHubLinkAccountIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+            return UIKit.UIImage(resource: R.image.gitHubLinkAccountIcon, compatibleWith: traitCollection)
+        }
+
+        /// `UIImage(named: "HomeQRCodeIcon", bundle: ..., traitCollection: ...)`
+        static func homeQRCodeIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+            return UIKit.UIImage(resource: R.image.homeQRCodeIcon, compatibleWith: traitCollection)
+        }
+
+        /// `UIImage(named: "LaunchImage", bundle: ..., traitCollection: ...)`
+        static func launchImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+            return UIKit.UIImage(resource: R.image.launchImage, compatibleWith: traitCollection)
+        }
+
+        /// `UIImage(named: "ScannerQRCodeIcon", bundle: ..., traitCollection: ...)`
+        static func scannerQRCodeIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+            return UIKit.UIImage(resource: R.image.scannerQRCodeIcon, compatibleWith: traitCollection)
+        }
+
+        fileprivate init() {}
+    }
+
+    /// This `R.nib` struct is generated, and contains static references to 0 nibs.
+    struct nib {
+        fileprivate init() {}
+    }
+
+    /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+    struct reuseIdentifier {
+        /// Reuse identifier `gistCommentCell`.
+        static let gistCommentCell: Rswift.ReuseIdentifier<GistCommentViewCell> = Rswift.ReuseIdentifier(identifier: "gistCommentCell")
+
+        fileprivate init() {}
+    }
+
+    /// This `R.segue` struct is generated, and contains static references to 0 view controllers.
+    struct segue {
+        fileprivate init() {}
+    }
+
+    /// This `R.storyboard` struct is generated, and contains static references to 5 storyboards.
+    struct storyboard {
+        /// Storyboard `Authentication`.
+        static let authentication = _R.storyboard.authentication()
+        /// Storyboard `CameraPermission`.
+        static let cameraPermission = _R.storyboard.cameraPermission()
+        /// Storyboard `GistComment`.
+        static let gistComment = _R.storyboard.gistComment()
+        /// Storyboard `Gist`.
+        static let gist = _R.storyboard.gist()
+        /// Storyboard `Scanner`.
+        static let scanner = _R.storyboard.scanner()
+
+        /// `UIStoryboard(name: "Authentication", bundle: ...)`
+        static func authentication(_: Void = ()) -> UIKit.UIStoryboard {
+            return UIKit.UIStoryboard(resource: R.storyboard.authentication)
+        }
+
+        /// `UIStoryboard(name: "CameraPermission", bundle: ...)`
+        static func cameraPermission(_: Void = ()) -> UIKit.UIStoryboard {
+            return UIKit.UIStoryboard(resource: R.storyboard.cameraPermission)
+        }
+
+        /// `UIStoryboard(name: "Gist", bundle: ...)`
+        static func gist(_: Void = ()) -> UIKit.UIStoryboard {
+            return UIKit.UIStoryboard(resource: R.storyboard.gist)
+        }
+
+        /// `UIStoryboard(name: "GistComment", bundle: ...)`
+        static func gistComment(_: Void = ()) -> UIKit.UIStoryboard {
+            return UIKit.UIStoryboard(resource: R.storyboard.gistComment)
+        }
+
+        /// `UIStoryboard(name: "Scanner", bundle: ...)`
+        static func scanner(_: Void = ()) -> UIKit.UIStoryboard {
+            return UIKit.UIStoryboard(resource: R.storyboard.scanner)
+        }
+
+        fileprivate init() {}
+    }
+
+    /// This `R.string` struct is generated, and contains static references to 1 localization tables.
+    struct string {
+        /// This `R.string.kodokomento` struct is generated, and contains static references to 16 localization keys.
+        struct kodokomento {
+            /// Value: %d COMMENTS
+            static let commentsButtonText = Rswift.StringResource(key: "commentsButtonText", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: ACCESS SETTINGS
+            static let cameraPermissionDeniedButton = Rswift.StringResource(key: "cameraPermissionDeniedButton", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: Are you sure you want to remove the authorization from your account?
+            static let unauthorizeAlertBody = Rswift.StringResource(key: "unauthorizeAlertBody", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: Authenticated!
+            static let authorizeAlertTitle = Rswift.StringResource(key: "authorizeAlertTitle", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: BE FIRST TO COMMENT!
+            static let emptyCommentsButtonText = Rswift.StringResource(key: "emptyCommentsButtonText", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: Cancel
+            static let unauthorizeAlertCancel = Rswift.StringResource(key: "unauthorizeAlertCancel", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: Confirm
+            static let unauthorizeAlertAction = Rswift.StringResource(key: "unauthorizeAlertAction", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: GRANT PERMISSION
+            static let cameraPermissionNotDeterminedButton = Rswift.StringResource(key: "cameraPermissionNotDeterminedButton", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: Gist Not Found!
+            static let gistNotFoundAlertTitle = Rswift.StringResource(key: "gistNotFoundAlertTitle", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: Kodokomento needs camera access to scan QRCode...   Press button above and enable
+            static let cameraPermissionDeniedBody = Rswift.StringResource(key: "cameraPermissionDeniedBody", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: Kodokomento needs camera access to scan QRCode...   Press button below to grant access
+            static let cameraPermissionNotDeterminedBody = Rswift.StringResource(key: "cameraPermissionNotDeterminedBody", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: Ok
+            static let authorizeAlertAction = Rswift.StringResource(key: "authorizeAlertAction", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: Ok
+            static let gistNotFoundAlertAction = Rswift.StringResource(key: "gistNotFoundAlertAction", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: Thanks for Authentication, now you can comment on Gists!
+            static let authorizeAlertBody = Rswift.StringResource(key: "authorizeAlertBody", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: This QRCode is not a Gist and/or Gist no exists anymore
+            static let gistNotFoundAlertBody = Rswift.StringResource(key: "gistNotFoundAlertBody", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: Unthentication
+            static let unauthorizeAlertTitle = Rswift.StringResource(key: "unauthorizeAlertTitle", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+
+            /// Value: %d COMMENTS
+            static func commentsButtonText(_ value1: Int) -> String {
+                return String(format: NSLocalizedString("commentsButtonText", tableName: "Kodokomento", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
+            }
+
+            /// Value: ACCESS SETTINGS
+            static func cameraPermissionDeniedButton(_: Void = ()) -> String {
+                return NSLocalizedString("cameraPermissionDeniedButton", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: Are you sure you want to remove the authorization from your account?
+            static func unauthorizeAlertBody(_: Void = ()) -> String {
+                return NSLocalizedString("unauthorizeAlertBody", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: Authenticated!
+            static func authorizeAlertTitle(_: Void = ()) -> String {
+                return NSLocalizedString("authorizeAlertTitle", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: BE FIRST TO COMMENT!
+            static func emptyCommentsButtonText(_: Void = ()) -> String {
+                return NSLocalizedString("emptyCommentsButtonText", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: Cancel
+            static func unauthorizeAlertCancel(_: Void = ()) -> String {
+                return NSLocalizedString("unauthorizeAlertCancel", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: Confirm
+            static func unauthorizeAlertAction(_: Void = ()) -> String {
+                return NSLocalizedString("unauthorizeAlertAction", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: GRANT PERMISSION
+            static func cameraPermissionNotDeterminedButton(_: Void = ()) -> String {
+                return NSLocalizedString("cameraPermissionNotDeterminedButton", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: Gist Not Found!
+            static func gistNotFoundAlertTitle(_: Void = ()) -> String {
+                return NSLocalizedString("gistNotFoundAlertTitle", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: Kodokomento needs camera access to scan QRCode...   Press button above and enable
+            static func cameraPermissionDeniedBody(_: Void = ()) -> String {
+                return NSLocalizedString("cameraPermissionDeniedBody", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: Kodokomento needs camera access to scan QRCode...   Press button below to grant access
+            static func cameraPermissionNotDeterminedBody(_: Void = ()) -> String {
+                return NSLocalizedString("cameraPermissionNotDeterminedBody", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: Ok
+            static func authorizeAlertAction(_: Void = ()) -> String {
+                return NSLocalizedString("authorizeAlertAction", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: Ok
+            static func gistNotFoundAlertAction(_: Void = ()) -> String {
+                return NSLocalizedString("gistNotFoundAlertAction", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: Thanks for Authentication, now you can comment on Gists!
+            static func authorizeAlertBody(_: Void = ()) -> String {
+                return NSLocalizedString("authorizeAlertBody", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: This QRCode is not a Gist and/or Gist no exists anymore
+            static func gistNotFoundAlertBody(_: Void = ()) -> String {
+                return NSLocalizedString("gistNotFoundAlertBody", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: Unthentication
+            static func unauthorizeAlertTitle(_: Void = ()) -> String {
+                return NSLocalizedString("unauthorizeAlertTitle", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+            }
+
+            fileprivate init() {}
+        }
+
+        fileprivate init() {}
+    }
+
+    fileprivate struct intern: Rswift.Validatable {
+        fileprivate static func validate() throws {
+            try _R.validate()
+        }
+
+        fileprivate init() {}
+    }
+
+    fileprivate class Class {}
+
     fileprivate init() {}
-  }
-  
-  /// This `R.file` struct is generated, and contains static references to 1 files.
-  struct file {
-    /// Resource file `AccessControl.plist`.
-    static let accessControlPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "AccessControl", pathExtension: "plist")
-    
-    /// `bundle.url(forResource: "AccessControl", withExtension: "plist")`
-    static func accessControlPlist(_: Void = ()) -> Foundation.URL? {
-      let fileResource = R.file.accessControlPlist
-      return fileResource.bundle.url(forResource: fileResource)
-    }
-    
-    fileprivate init() {}
-  }
-  
-  /// This `R.font` struct is generated, and contains static references to 0 fonts.
-  struct font {
-    fileprivate init() {}
-  }
-  
-  /// This `R.image` struct is generated, and contains static references to 5 images.
-  struct image {
-    /// Image `CameraPermissionIcon`.
-    static let cameraPermissionIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "CameraPermissionIcon")
-    /// Image `GitHubLinkAccountIcon`.
-    static let gitHubLinkAccountIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "GitHubLinkAccountIcon")
-    /// Image `HomeQRCodeIcon`.
-    static let homeQRCodeIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "HomeQRCodeIcon")
-    /// Image `LaunchImage`.
-    static let launchImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "LaunchImage")
-    /// Image `ScannerQRCodeIcon`.
-    static let scannerQRCodeIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "ScannerQRCodeIcon")
-    
-    /// `UIImage(named: "CameraPermissionIcon", bundle: ..., traitCollection: ...)`
-    static func cameraPermissionIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.cameraPermissionIcon, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "GitHubLinkAccountIcon", bundle: ..., traitCollection: ...)`
-    static func gitHubLinkAccountIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.gitHubLinkAccountIcon, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "HomeQRCodeIcon", bundle: ..., traitCollection: ...)`
-    static func homeQRCodeIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.homeQRCodeIcon, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "LaunchImage", bundle: ..., traitCollection: ...)`
-    static func launchImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.launchImage, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "ScannerQRCodeIcon", bundle: ..., traitCollection: ...)`
-    static func scannerQRCodeIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.scannerQRCodeIcon, compatibleWith: traitCollection)
-    }
-    
-    fileprivate init() {}
-  }
-  
-  /// This `R.nib` struct is generated, and contains static references to 0 nibs.
-  struct nib {
-    fileprivate init() {}
-  }
-  
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
-  struct reuseIdentifier {
-    /// Reuse identifier `gistCommentCell`.
-    static let gistCommentCell: Rswift.ReuseIdentifier<GistCommentViewCell> = Rswift.ReuseIdentifier(identifier: "gistCommentCell")
-    
-    fileprivate init() {}
-  }
-  
-  /// This `R.segue` struct is generated, and contains static references to 0 view controllers.
-  struct segue {
-    fileprivate init() {}
-  }
-  
-  /// This `R.storyboard` struct is generated, and contains static references to 5 storyboards.
-  struct storyboard {
-    /// Storyboard `Authentication`.
-    static let authentication = _R.storyboard.authentication()
-    /// Storyboard `CameraPermission`.
-    static let cameraPermission = _R.storyboard.cameraPermission()
-    /// Storyboard `GistComment`.
-    static let gistComment = _R.storyboard.gistComment()
-    /// Storyboard `Gist`.
-    static let gist = _R.storyboard.gist()
-    /// Storyboard `Scanner`.
-    static let scanner = _R.storyboard.scanner()
-    
-    /// `UIStoryboard(name: "Authentication", bundle: ...)`
-    static func authentication(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.authentication)
-    }
-    
-    /// `UIStoryboard(name: "CameraPermission", bundle: ...)`
-    static func cameraPermission(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.cameraPermission)
-    }
-    
-    /// `UIStoryboard(name: "Gist", bundle: ...)`
-    static func gist(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.gist)
-    }
-    
-    /// `UIStoryboard(name: "GistComment", bundle: ...)`
-    static func gistComment(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.gistComment)
-    }
-    
-    /// `UIStoryboard(name: "Scanner", bundle: ...)`
-    static func scanner(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.scanner)
-    }
-    
-    fileprivate init() {}
-  }
-  
-  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
-  struct string {
-    /// This `R.string.kodokomento` struct is generated, and contains static references to 16 localization keys.
-    struct kodokomento {
-      /// Value: %d COMMENTS
-      static let commentsButtonText = Rswift.StringResource(key: "commentsButtonText", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: ACCESS SETTINGS
-      static let cameraPermissionDeniedButton = Rswift.StringResource(key: "cameraPermissionDeniedButton", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Are you sure you want to remove the authorization from your account?
-      static let unauthorizeAlertBody = Rswift.StringResource(key: "unauthorizeAlertBody", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Authenticated!
-      static let authorizeAlertTitle = Rswift.StringResource(key: "authorizeAlertTitle", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: BE FIRST TO COMMENT!
-      static let emptyCommentsButtonText = Rswift.StringResource(key: "emptyCommentsButtonText", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Cancel
-      static let unauthorizeAlertCancel = Rswift.StringResource(key: "unauthorizeAlertCancel", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Confirm
-      static let unauthorizeAlertAction = Rswift.StringResource(key: "unauthorizeAlertAction", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: GRANT PERMISSION
-      static let cameraPermissionNotDeterminedButton = Rswift.StringResource(key: "cameraPermissionNotDeterminedButton", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Gist Not Found!
-      static let gistNotFoundAlertTitle = Rswift.StringResource(key: "gistNotFoundAlertTitle", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Kodokomento needs camera access to scan QRCode...   Press button above and enable
-      static let cameraPermissionDeniedBody = Rswift.StringResource(key: "cameraPermissionDeniedBody", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Kodokomento needs camera access to scan QRCode...   Press button below to grant access
-      static let cameraPermissionNotDeterminedBody = Rswift.StringResource(key: "cameraPermissionNotDeterminedBody", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Ok
-      static let authorizeAlertAction = Rswift.StringResource(key: "authorizeAlertAction", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Ok
-      static let gistNotFoundAlertAction = Rswift.StringResource(key: "gistNotFoundAlertAction", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Thanks for Authentication, now you can comment on Gists!
-      static let authorizeAlertBody = Rswift.StringResource(key: "authorizeAlertBody", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: This QRCode is not a Gist and/or Gist no exists anymore
-      static let gistNotFoundAlertBody = Rswift.StringResource(key: "gistNotFoundAlertBody", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Unthentication
-      static let unauthorizeAlertTitle = Rswift.StringResource(key: "unauthorizeAlertTitle", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
-      
-      /// Value: %d COMMENTS
-      static func commentsButtonText(_ value1: Int) -> String {
-        return String(format: NSLocalizedString("commentsButtonText", tableName: "Kodokomento", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
-      }
-      
-      /// Value: ACCESS SETTINGS
-      static func cameraPermissionDeniedButton(_: Void = ()) -> String {
-        return NSLocalizedString("cameraPermissionDeniedButton", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: Are you sure you want to remove the authorization from your account?
-      static func unauthorizeAlertBody(_: Void = ()) -> String {
-        return NSLocalizedString("unauthorizeAlertBody", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: Authenticated!
-      static func authorizeAlertTitle(_: Void = ()) -> String {
-        return NSLocalizedString("authorizeAlertTitle", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: BE FIRST TO COMMENT!
-      static func emptyCommentsButtonText(_: Void = ()) -> String {
-        return NSLocalizedString("emptyCommentsButtonText", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: Cancel
-      static func unauthorizeAlertCancel(_: Void = ()) -> String {
-        return NSLocalizedString("unauthorizeAlertCancel", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: Confirm
-      static func unauthorizeAlertAction(_: Void = ()) -> String {
-        return NSLocalizedString("unauthorizeAlertAction", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: GRANT PERMISSION
-      static func cameraPermissionNotDeterminedButton(_: Void = ()) -> String {
-        return NSLocalizedString("cameraPermissionNotDeterminedButton", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: Gist Not Found!
-      static func gistNotFoundAlertTitle(_: Void = ()) -> String {
-        return NSLocalizedString("gistNotFoundAlertTitle", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: Kodokomento needs camera access to scan QRCode...   Press button above and enable
-      static func cameraPermissionDeniedBody(_: Void = ()) -> String {
-        return NSLocalizedString("cameraPermissionDeniedBody", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: Kodokomento needs camera access to scan QRCode...   Press button below to grant access
-      static func cameraPermissionNotDeterminedBody(_: Void = ()) -> String {
-        return NSLocalizedString("cameraPermissionNotDeterminedBody", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: Ok
-      static func authorizeAlertAction(_: Void = ()) -> String {
-        return NSLocalizedString("authorizeAlertAction", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: Ok
-      static func gistNotFoundAlertAction(_: Void = ()) -> String {
-        return NSLocalizedString("gistNotFoundAlertAction", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: Thanks for Authentication, now you can comment on Gists!
-      static func authorizeAlertBody(_: Void = ()) -> String {
-        return NSLocalizedString("authorizeAlertBody", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: This QRCode is not a Gist and/or Gist no exists anymore
-      static func gistNotFoundAlertBody(_: Void = ()) -> String {
-        return NSLocalizedString("gistNotFoundAlertBody", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: Unthentication
-      static func unauthorizeAlertTitle(_: Void = ()) -> String {
-        return NSLocalizedString("unauthorizeAlertTitle", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
-      }
-      
-      fileprivate init() {}
-    }
-    
-    fileprivate init() {}
-  }
-  
-  fileprivate struct intern: Rswift.Validatable {
-    fileprivate static func validate() throws {
-      try _R.validate()
-    }
-    
-    fileprivate init() {}
-  }
-  
-  fileprivate class Class {}
-  
-  fileprivate init() {}
 }
 
 struct _R: Rswift.Validatable {
-  static func validate() throws {
-    try storyboard.validate()
-  }
-  
-  struct nib {
-    fileprivate init() {}
-  }
-  
-  struct storyboard: Rswift.Validatable {
     static func validate() throws {
-      try scanner.validate()
-      try gist.validate()
-      try authentication.validate()
-      try cameraPermission.validate()
-      try gistComment.validate()
+        try storyboard.validate()
     }
-    
-    struct authentication: Rswift.StoryboardResourceType, Rswift.Validatable {
-      let bundle = R.hostingBundle
-      let main = StoryboardViewControllerResource<AuthenticationViewController>(identifier: "main")
-      let name = "Authentication"
-      let root = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "root")
-      
-      func main(_: Void = ()) -> AuthenticationViewController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: main)
-      }
-      
-      func root(_: Void = ()) -> UIKit.UINavigationController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: root)
-      }
-      
-      static func validate() throws {
-        if UIKit.UIImage(named: "GitHubLinkAccountIcon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'GitHubLinkAccountIcon' is used in storyboard 'Authentication', but couldn't be loaded.") }
-        if _R.storyboard.authentication().root() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'root' could not be loaded from storyboard 'Authentication' as 'UIKit.UINavigationController'.") }
-        if _R.storyboard.authentication().main() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'main' could not be loaded from storyboard 'Authentication' as 'AuthenticationViewController'.") }
-      }
-      
-      fileprivate init() {}
+
+    struct nib {
+        fileprivate init() {}
     }
-    
-    struct cameraPermission: Rswift.StoryboardResourceType, Rswift.Validatable {
-      let bundle = R.hostingBundle
-      let main = StoryboardViewControllerResource<CameraPermissionViewController>(identifier: "main")
-      let name = "CameraPermission"
-      let root = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "root")
-      
-      func main(_: Void = ()) -> CameraPermissionViewController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: main)
-      }
-      
-      func root(_: Void = ()) -> UIKit.UINavigationController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: root)
-      }
-      
-      static func validate() throws {
-        if UIKit.UIImage(named: "CameraPermissionIcon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'CameraPermissionIcon' is used in storyboard 'CameraPermission', but couldn't be loaded.") }
-        if _R.storyboard.cameraPermission().root() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'root' could not be loaded from storyboard 'CameraPermission' as 'UIKit.UINavigationController'.") }
-        if _R.storyboard.cameraPermission().main() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'main' could not be loaded from storyboard 'CameraPermission' as 'CameraPermissionViewController'.") }
-      }
-      
-      fileprivate init() {}
+
+    struct storyboard: Rswift.Validatable {
+        static func validate() throws {
+            try scanner.validate()
+            try gist.validate()
+            try authentication.validate()
+            try cameraPermission.validate()
+            try gistComment.validate()
+        }
+
+        struct authentication: Rswift.StoryboardResourceType, Rswift.Validatable {
+            let bundle = R.hostingBundle
+            let main = StoryboardViewControllerResource<AuthenticationViewController>(identifier: "main")
+            let name = "Authentication"
+            let root = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "root")
+
+            func main(_: Void = ()) -> AuthenticationViewController? {
+                return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: main)
+            }
+
+            func root(_: Void = ()) -> UIKit.UINavigationController? {
+                return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: root)
+            }
+
+            static func validate() throws {
+                if UIKit.UIImage(named: "GitHubLinkAccountIcon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'GitHubLinkAccountIcon' is used in storyboard 'Authentication', but couldn't be loaded.") }
+                if _R.storyboard.authentication().root() == nil { throw Rswift.ValidationError(description: "[R.swift] ViewController with identifier 'root' could not be loaded from storyboard 'Authentication' as 'UIKit.UINavigationController'.") }
+                if _R.storyboard.authentication().main() == nil { throw Rswift.ValidationError(description: "[R.swift] ViewController with identifier 'main' could not be loaded from storyboard 'Authentication' as 'AuthenticationViewController'.") }
+            }
+
+            fileprivate init() {}
+        }
+
+        struct cameraPermission: Rswift.StoryboardResourceType, Rswift.Validatable {
+            let bundle = R.hostingBundle
+            let main = StoryboardViewControllerResource<CameraPermissionViewController>(identifier: "main")
+            let name = "CameraPermission"
+            let root = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "root")
+
+            func main(_: Void = ()) -> CameraPermissionViewController? {
+                return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: main)
+            }
+
+            func root(_: Void = ()) -> UIKit.UINavigationController? {
+                return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: root)
+            }
+
+            static func validate() throws {
+                if UIKit.UIImage(named: "CameraPermissionIcon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'CameraPermissionIcon' is used in storyboard 'CameraPermission', but couldn't be loaded.") }
+                if _R.storyboard.cameraPermission().root() == nil { throw Rswift.ValidationError(description: "[R.swift] ViewController with identifier 'root' could not be loaded from storyboard 'CameraPermission' as 'UIKit.UINavigationController'.") }
+                if _R.storyboard.cameraPermission().main() == nil { throw Rswift.ValidationError(description: "[R.swift] ViewController with identifier 'main' could not be loaded from storyboard 'CameraPermission' as 'CameraPermissionViewController'.") }
+            }
+
+            fileprivate init() {}
+        }
+
+        struct gist: Rswift.StoryboardResourceType, Rswift.Validatable {
+            let bundle = R.hostingBundle
+            let detail = StoryboardViewControllerResource<GistDetailViewController>(identifier: "detail")
+            let main = StoryboardViewControllerResource<GistViewController>(identifier: "main")
+            let name = "Gist"
+            let root = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "root")
+
+            func detail(_: Void = ()) -> GistDetailViewController? {
+                return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: detail)
+            }
+
+            func main(_: Void = ()) -> GistViewController? {
+                return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: main)
+            }
+
+            func root(_: Void = ()) -> UIKit.UINavigationController? {
+                return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: root)
+            }
+
+            static func validate() throws {
+                if UIKit.UIImage(named: "HomeQRCodeIcon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'HomeQRCodeIcon' is used in storyboard 'Gist', but couldn't be loaded.") }
+                if _R.storyboard.gist().root() == nil { throw Rswift.ValidationError(description: "[R.swift] ViewController with identifier 'root' could not be loaded from storyboard 'Gist' as 'UIKit.UINavigationController'.") }
+                if _R.storyboard.gist().main() == nil { throw Rswift.ValidationError(description: "[R.swift] ViewController with identifier 'main' could not be loaded from storyboard 'Gist' as 'GistViewController'.") }
+                if _R.storyboard.gist().detail() == nil { throw Rswift.ValidationError(description: "[R.swift] ViewController with identifier 'detail' could not be loaded from storyboard 'Gist' as 'GistDetailViewController'.") }
+            }
+
+            fileprivate init() {}
+        }
+
+        struct gistComment: Rswift.StoryboardResourceType, Rswift.Validatable {
+            let bundle = R.hostingBundle
+            let create = StoryboardViewControllerResource<GistCommentCreateViewController>(identifier: "create")
+            let main = StoryboardViewControllerResource<GistCommentViewController>(identifier: "main")
+            let name = "GistComment"
+            let root = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "root")
+
+            func create(_: Void = ()) -> GistCommentCreateViewController? {
+                return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: create)
+            }
+
+            func main(_: Void = ()) -> GistCommentViewController? {
+                return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: main)
+            }
+
+            func root(_: Void = ()) -> UIKit.UINavigationController? {
+                return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: root)
+            }
+
+            static func validate() throws {
+                if _R.storyboard.gistComment().main() == nil { throw Rswift.ValidationError(description: "[R.swift] ViewController with identifier 'main' could not be loaded from storyboard 'GistComment' as 'GistCommentViewController'.") }
+                if _R.storyboard.gistComment().root() == nil { throw Rswift.ValidationError(description: "[R.swift] ViewController with identifier 'root' could not be loaded from storyboard 'GistComment' as 'UIKit.UINavigationController'.") }
+                if _R.storyboard.gistComment().create() == nil { throw Rswift.ValidationError(description: "[R.swift] ViewController with identifier 'create' could not be loaded from storyboard 'GistComment' as 'GistCommentCreateViewController'.") }
+            }
+
+            fileprivate init() {}
+        }
+
+        struct scanner: Rswift.StoryboardResourceType, Rswift.Validatable {
+            let bundle = R.hostingBundle
+            let main = StoryboardViewControllerResource<ScannerViewController>(identifier: "main")
+            let name = "Scanner"
+            let root = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "root")
+
+            func main(_: Void = ()) -> ScannerViewController? {
+                return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: main)
+            }
+
+            func root(_: Void = ()) -> UIKit.UINavigationController? {
+                return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: root)
+            }
+
+            static func validate() throws {
+                if UIKit.UIImage(named: "ScannerQRCodeIcon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ScannerQRCodeIcon' is used in storyboard 'Scanner', but couldn't be loaded.") }
+                if _R.storyboard.scanner().root() == nil { throw Rswift.ValidationError(description: "[R.swift] ViewController with identifier 'root' could not be loaded from storyboard 'Scanner' as 'UIKit.UINavigationController'.") }
+                if _R.storyboard.scanner().main() == nil { throw Rswift.ValidationError(description: "[R.swift] ViewController with identifier 'main' could not be loaded from storyboard 'Scanner' as 'ScannerViewController'.") }
+            }
+
+            fileprivate init() {}
+        }
+
+        fileprivate init() {}
     }
-    
-    struct gist: Rswift.StoryboardResourceType, Rswift.Validatable {
-      let bundle = R.hostingBundle
-      let detail = StoryboardViewControllerResource<GistDetailViewController>(identifier: "detail")
-      let main = StoryboardViewControllerResource<GistViewController>(identifier: "main")
-      let name = "Gist"
-      let root = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "root")
-      
-      func detail(_: Void = ()) -> GistDetailViewController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: detail)
-      }
-      
-      func main(_: Void = ()) -> GistViewController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: main)
-      }
-      
-      func root(_: Void = ()) -> UIKit.UINavigationController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: root)
-      }
-      
-      static func validate() throws {
-        if UIKit.UIImage(named: "HomeQRCodeIcon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'HomeQRCodeIcon' is used in storyboard 'Gist', but couldn't be loaded.") }
-        if _R.storyboard.gist().root() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'root' could not be loaded from storyboard 'Gist' as 'UIKit.UINavigationController'.") }
-        if _R.storyboard.gist().main() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'main' could not be loaded from storyboard 'Gist' as 'GistViewController'.") }
-        if _R.storyboard.gist().detail() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'detail' could not be loaded from storyboard 'Gist' as 'GistDetailViewController'.") }
-      }
-      
-      fileprivate init() {}
-    }
-    
-    struct gistComment: Rswift.StoryboardResourceType, Rswift.Validatable {
-      let bundle = R.hostingBundle
-      let create = StoryboardViewControllerResource<GistCommentCreateViewController>(identifier: "create")
-      let main = StoryboardViewControllerResource<GistCommentViewController>(identifier: "main")
-      let name = "GistComment"
-      let root = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "root")
-      
-      func create(_: Void = ()) -> GistCommentCreateViewController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: create)
-      }
-      
-      func main(_: Void = ()) -> GistCommentViewController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: main)
-      }
-      
-      func root(_: Void = ()) -> UIKit.UINavigationController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: root)
-      }
-      
-      static func validate() throws {
-        if _R.storyboard.gistComment().main() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'main' could not be loaded from storyboard 'GistComment' as 'GistCommentViewController'.") }
-        if _R.storyboard.gistComment().root() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'root' could not be loaded from storyboard 'GistComment' as 'UIKit.UINavigationController'.") }
-        if _R.storyboard.gistComment().create() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'create' could not be loaded from storyboard 'GistComment' as 'GistCommentCreateViewController'.") }
-      }
-      
-      fileprivate init() {}
-    }
-    
-    struct scanner: Rswift.StoryboardResourceType, Rswift.Validatable {
-      let bundle = R.hostingBundle
-      let main = StoryboardViewControllerResource<ScannerViewController>(identifier: "main")
-      let name = "Scanner"
-      let root = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "root")
-      
-      func main(_: Void = ()) -> ScannerViewController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: main)
-      }
-      
-      func root(_: Void = ()) -> UIKit.UINavigationController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: root)
-      }
-      
-      static func validate() throws {
-        if UIKit.UIImage(named: "ScannerQRCodeIcon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ScannerQRCodeIcon' is used in storyboard 'Scanner', but couldn't be loaded.") }
-        if _R.storyboard.scanner().root() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'root' could not be loaded from storyboard 'Scanner' as 'UIKit.UINavigationController'.") }
-        if _R.storyboard.scanner().main() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'main' could not be loaded from storyboard 'Scanner' as 'ScannerViewController'.") }
-      }
-      
-      fileprivate init() {}
-    }
-    
+
     fileprivate init() {}
-  }
-  
-  fileprivate init() {}
 }

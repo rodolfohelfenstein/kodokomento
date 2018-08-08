@@ -12,7 +12,6 @@ enum FileType: Codable {
     case file(GistFile)
 
     init(from decoder: Decoder) throws {
-
         let container = try decoder.singleValueContainer()
         do {
             self = try .file(container.decode(GistFile.self))
@@ -21,11 +20,9 @@ enum FileType: Codable {
                                              DecodingError.Context(codingPath: decoder.codingPath,
                                                                    debugDescription: "Encoded payload not of an expected type"))
         }
-
     }
 
-    func encode(to encoder: Encoder) throws { }
-
+    func encode(to _: Encoder) throws {}
 }
 
 struct GistFile {
@@ -56,5 +53,4 @@ extension GistFile: Decodable {
                   language: language,
                   rawUrl: rawUrl)
     }
-
 }

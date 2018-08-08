@@ -26,22 +26,18 @@ struct Gist {
     }
 
     var gistFile: GistFile? {
-
         if let value = file.first?.value {
             switch value {
-            case .file(let file):
+            case let .file(file):
                 return file
             }
         }
 
         return nil
-
     }
-
 }
 
 extension Gist: Decodable {
-
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
@@ -59,6 +55,5 @@ extension Gist: Decodable {
                                                    in: container,
                                                    debugDescription: "Date string does not match format expected by formatter.")
         }
-
     }
 }

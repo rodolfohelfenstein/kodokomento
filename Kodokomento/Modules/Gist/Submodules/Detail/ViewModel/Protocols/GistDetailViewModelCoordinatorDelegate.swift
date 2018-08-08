@@ -12,5 +12,4 @@ protocol GistDetailViewModelCoordinatorDelegate: class {
     func close()
     func showComments(gistId: String)
     func gistNotFound()
-
 }

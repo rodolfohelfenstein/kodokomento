@@ -16,5 +16,4 @@ protocol GistViewModelType {
     func didScannerButtonTouched()
     func didUnauthorizeButtonTouched()
     func didUnautohrizeAlertButtonTouched()
-
 }

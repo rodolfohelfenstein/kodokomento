@@ -9,7 +9,6 @@
 import UIKit
 
 class ScannerCoordinator: Coordinator {
-
     // MARK: Lifecycle
 
     override func start() {
@@ -21,7 +20,6 @@ class ScannerCoordinator: Coordinator {
     // MARK: Flows
 
     func showScanner() {
-
         guard let controller = R.storyboard.scanner.main() else {
             fatalError("ScannerViewController in Scanner.storyboard has not found.")
         }

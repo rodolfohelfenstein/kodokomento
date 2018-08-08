@@ -34,19 +34,14 @@ class GistViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle { return .default }
 
     func setupNavigationItem() {
-
         if !LocalStorageHelper.accessToken.isEmpty {
-
             navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh,
                                                                 target: self,
                                                                 action: #selector(unauthorizeButtonTouched(_:)))
 
         } else {
-
             navigationItem.rightBarButtonItem = nil
-
         }
-
     }
 
     // MARK: Actions
@@ -55,20 +50,17 @@ class GistViewController: UIViewController {
         viewModel?.didScannerButtonTouched()
     }
 
-    @IBAction func unauthorizeButtonTouched(_ sender: Any) {
+    @IBAction func unauthorizeButtonTouched(_: Any) {
         viewModel?.didUnauthorizeButtonTouched()
     }
-
 }
 
 extension GistViewController: GistViewModelViewDelegate {
-
     func refreshAuthorizationButton() {
         setupNavigationItem()
     }
 
     func showUnauthorizeAlert(title: String, body: String, action: String, cancel: String) {
-
         let alert = UIAlertController(title: title, message: body, preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: action, style: .default, handler: { [weak self] _ in
@@ -78,7 +70,5 @@ extension GistViewController: GistViewModelViewDelegate {
         alert.addAction(UIAlertAction(title: cancel, style: .cancel, handler: nil))
 
         present(alert, animated: true, completion: nil)
-
     }
-
 }

@@ -114,7 +114,6 @@ extension CameraScanHelper: AVCaptureMetadataOutputObjectsDelegate {
             let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false),
             let gist = urlComponents.queryItems?.filter({ $0.name == "gist" }).first,
             let value = gist.value {
-
             _delegate?.didCameraScan(qrcode: QRCode(value: value,
                                                     bounds: metadataQrCode.bounds))
 

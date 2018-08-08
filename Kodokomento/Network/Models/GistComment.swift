@@ -20,13 +20,10 @@ struct GistComment {
         case body
         case createdAt = "created_at"
     }
-
 }
 
 extension GistComment: Decodable {
-
     init(from decoder: Decoder) throws {
-
         let container = try decoder.container(keyedBy: GistCommentKeys.self)
 
         id = try container.decode(Int.self, forKey: .id)
@@ -41,6 +38,5 @@ extension GistComment: Decodable {
                                                    in: container,
                                                    debugDescription: "Date string does not match format expected by formatter.")
         }
-
     }
 }

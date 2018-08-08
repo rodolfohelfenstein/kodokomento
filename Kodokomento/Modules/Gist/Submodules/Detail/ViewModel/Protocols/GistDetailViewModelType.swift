@@ -24,5 +24,4 @@ protocol GistDetailViewModelType {
     var gistFilename: String? { get }
     var gistBody: URL? { get }
     var commentsCount: String? { get }
-
 }

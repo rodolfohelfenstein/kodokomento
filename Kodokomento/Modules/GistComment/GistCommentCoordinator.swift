@@ -9,7 +9,6 @@
 import UIKit
 
 class GistCommentCoordinator: Coordinator {
-
     // MARK: Properties
 
     fileprivate weak var mainController: GistCommentViewController?
@@ -42,7 +41,6 @@ class GistCommentCoordinator: Coordinator {
     // MARK: Flows
 
     func showGistComment() {
-
         guard let controller = R.storyboard.gistComment.main() else {
             fatalError("GistCommentViewController in GistComment.storyboard has not found.")
         }
@@ -53,11 +51,9 @@ class GistCommentCoordinator: Coordinator {
         router.setRoot(module: controller, hideBar: false)
 
         mainController = controller
-
     }
 
     func showGistCommentCreate() {
-
         guard let controller = R.storyboard.gistComment.create() else {
             fatalError("GistCommentCreateViewController in GistComment.storyboard has not found.")
         }
@@ -68,7 +64,6 @@ class GistCommentCoordinator: Coordinator {
         router.push(module: controller)
 
         createController = controller
-
     }
 
     // MARK: Module
@@ -80,9 +75,7 @@ class GistCommentCoordinator: Coordinator {
         coordinator.finish = { [weak self] status in
             self?.removeDependency(coordinator)
             self?.router.dismiss(animated: true, completion: {
-
                 if status {
-
                     let alert = UIAlertController(title: R.string.kodokomento.authorizeAlertTitle(),
                                                   message: R.string.kodokomento.authorizeAlertBody(),
                                                   preferredStyle: .alert)
@@ -90,20 +83,17 @@ class GistCommentCoordinator: Coordinator {
                     alert.addAction(UIAlertAction(title: R.string.kodokomento.authorizeAlertAction(),
                                                   style: .default,
                                                   handler: { [weak self] _ in
-                                                    self?.createController?.viewModel?.didPostButtonTouched()
+                                                      self?.createController?.viewModel?.didPostButtonTouched()
                     }))
 
                     self?.router.present(module: alert)
-
                 }
 
             })
-
         }
 
         router.present(module: coordinator)
     }
-
 }
 
 extension GistCommentCoordinator: GistCommentViewModelCoordinatorDelegate {

@@ -6,8 +6,8 @@
 //  Copyright © 2018 Helfens Studios. All rights reserved.
 //
 
-import UIKit
 import Kingfisher
+import UIKit
 import WebKit
 
 class GistDetailViewController: UIViewController {
@@ -40,7 +40,6 @@ class GistDetailViewController: UIViewController {
         setupAvatarImageView()
 
         viewModel?.viewDidLoad()
-
     }
 
     // MARK: Layouts
@@ -48,19 +47,15 @@ class GistDetailViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle { return .default }
 
     func setupGistView() {
-
         gistView.layer.borderColor = #colorLiteral(red: 0.8823529412, green: 0.8941176471, blue: 0.9098039216, alpha: 1)
         gistView.layer.borderWidth = 1.0
         gistView.layer.cornerRadius = 4.0
         gistView.clipsToBounds = true
-
     }
 
     func setupAvatarImageView() {
-
         ownerAvatarImageView.layer.cornerRadius = ownerAvatarImageView.frame.height / 2
         ownerAvatarImageView.clipsToBounds = true
-
     }
 
     // MARK: Actions
@@ -72,20 +67,17 @@ class GistDetailViewController: UIViewController {
     @IBAction func commentButtonTouched(_: Any) {
         viewModel?.didCommentButtonTouched()
     }
-
 }
 
 extension GistDetailViewController: GistDetailViewModelViewDelegate {
-
     func reloadFields() {
-
         DispatchQueue.main.async { [weak self] in
 
             if let ownerAvatar = self?.viewModel?.ownerAvatar {
                 self?.ownerAvatarImageView.kf.setImage(with: ownerAvatar,
-                                                 placeholder: nil,
-                                                 options: [.transition(ImageTransition.fade(0.3))],
-                                                 progressBlock: nil) { _, _, _, _ in }
+                                                       placeholder: nil,
+                                                       options: [.transition(ImageTransition.fade(0.3))],
+                                                       progressBlock: nil) { _, _, _, _ in }
             }
 
             if let ownerIdentifier = self?.viewModel?.ownerIdentifier {
@@ -105,9 +97,7 @@ extension GistDetailViewController: GistDetailViewModelViewDelegate {
             }
 
             self?.commentsButton.setTitle(self?.viewModel?.commentsCount, for: .normal)
-
         }
-
     }
 
     func setLoading(hidden: Bool) {
@@ -118,7 +108,6 @@ extension GistDetailViewController: GistDetailViewModelViewDelegate {
     }
 
     func showAlert(title: String, body: String, action: String) {
-
         let alert = UIAlertController(title: title, message: body, preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: action, style: .default, handler: { [weak self] _ in
@@ -126,7 +115,5 @@ extension GistDetailViewController: GistDetailViewModelViewDelegate {
         }))
 
         present(alert, animated: true, completion: nil)
-
     }
-
 }

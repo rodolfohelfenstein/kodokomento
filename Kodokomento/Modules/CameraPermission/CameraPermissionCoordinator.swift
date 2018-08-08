@@ -9,7 +9,6 @@
 import UIKit
 
 class CameraPermissionCoordinator: Coordinator {
-
     // MARK: Lifecycle
 
     override func start() {
@@ -21,7 +20,6 @@ class CameraPermissionCoordinator: Coordinator {
     // MARK: Flows
 
     func showCameraPermission() {
-
         guard let controller = R.storyboard.cameraPermission.main() else {
             fatalError("CameraPermissionViewController in CameraPermission.storyboard has not found.")
         }

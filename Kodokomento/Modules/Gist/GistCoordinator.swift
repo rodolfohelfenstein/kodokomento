@@ -9,7 +9,6 @@
 import Foundation
 
 class GistCoordinator: Coordinator {
-
     // MARK: Lifecycle
 
     override func start() {
@@ -21,7 +20,6 @@ class GistCoordinator: Coordinator {
     // MARK: Flows
 
     func showGist() {
-
         guard let controller = R.storyboard.gist.main() else {
             fatalError("GistViewController in Gist.storyboard has not found.")
         }
@@ -31,17 +29,15 @@ class GistCoordinator: Coordinator {
         controller.viewModel?.coordinatorDelegate = self
 
         router.setRoot(module: controller, hideBar: false)
-
     }
 
     func showGistDetail(gistId: String) {
-
         guard let controller = R.storyboard.gist.detail() else {
             fatalError("GistDetailViewController in Gist.storyboard has not found.")
         }
 
         controller.viewModel = GistDetailViewModel(network: network,
-                                                             gistId: gistId)
+                                                   gistId: gistId)
         controller.viewModel?.coordinatorDelegate = self
 
         router.push(module: controller)
@@ -115,5 +111,4 @@ extension GistCoordinator: GistDetailViewModelCoordinatorDelegate {
     func gistNotFound() {
         router.popToRoot(animated: true)
     }
-
 }
