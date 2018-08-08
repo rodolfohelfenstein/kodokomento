@@ -13,6 +13,7 @@ class GistCommentViewCell: UITableViewCell {
     @IBOutlet var boxView: UIView!
     @IBOutlet var avatarImageView: UIImageView!
     @IBOutlet var commentTitle: UILabel!
+    @IBOutlet var commentDate: UILabel!
     @IBOutlet var commentBody: UILabel!
 
     override func awakeFromNib() {
@@ -39,5 +40,10 @@ class GistCommentViewCell: UITableViewCell {
 
         commentTitle.text = gistComment.user.login
         commentBody.text = gistComment.body
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM\nyy"
+
+        commentDate.text = formatter.string(from: gistComment.createdAt)
     }
 }

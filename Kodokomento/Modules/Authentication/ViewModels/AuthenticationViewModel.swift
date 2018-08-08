@@ -54,7 +54,7 @@ class AuthenticationViewModel {
             switch response {
             case let .success(credential):
                 self?.coordinatorDelegate?.authenticated(credential: credential)
-            case let .failure(error):
+            case .failure:
                 break
             }
         }

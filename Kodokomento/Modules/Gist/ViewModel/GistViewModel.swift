@@ -27,9 +27,25 @@ class GistViewModel {
 }
 
 extension GistViewModel: GistViewModelType {
+
     func viewWillAppear() {}
 
     func didScannerButtonTouched() {
         coordinatorDelegate?.showScanner()
     }
+
+    func didUnauthorizeButtonTouched() {
+        viewDelegate?.showUnauthorizeAlert(title: R.string.kodokomento.unauthorizeAlertTitle(),
+                                           body: R.string.kodokomento.unauthorizeAlertBody(),
+                                           action: R.string.kodokomento.unauthorizeAlertAction(),
+                                           cancel: R.string.kodokomento.unauthorizeAlertCancel())
+    }
+
+    func didUnautohrizeAlertButtonTouched() {
+
+        LocalStorageHelper.accessToken = ""
+        viewDelegate?.refreshAuthorizationButton()
+
+    }
+
 }

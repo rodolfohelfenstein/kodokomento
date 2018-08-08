@@ -20,3 +20,12 @@
 "gistNotFoundAlertTitle" = "Gist Not Found!";
 "gistNotFoundAlertBody" = "This QRCode is not a Gist and/or Gist no exists anymore";
 "gistNotFoundAlertAction" = "Ok";
+
+"authorizeAlertTitle" = "Authenticated!";
+"authorizeAlertBody" = "Thanks for Authentication, now you can comment on Gists!";
+"authorizeAlertAction" = "Ok";
+
+"unauthorizeAlertTitle" = "Unthentication";
+"unauthorizeAlertBody" = "Are you sure you want to remove the authorization from your account?";
+"unauthorizeAlertAction" = "Confirm";
+"unauthorizeAlertCancel" = "Cancel";

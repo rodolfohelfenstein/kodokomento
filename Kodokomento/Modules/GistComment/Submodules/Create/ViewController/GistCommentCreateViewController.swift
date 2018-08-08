@@ -37,6 +37,9 @@ class GistCommentCreateViewController: UIViewController {
         setupTextView()
 
         viewModel?.viewDidLoad()
+
+        textView.becomeFirstResponder()
+
     }
 
     override func viewWillDisappear(_ animated: Bool) {

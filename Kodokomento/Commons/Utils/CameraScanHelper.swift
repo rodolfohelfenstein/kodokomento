@@ -109,8 +109,13 @@ extension CameraScanHelper: AVCaptureMetadataOutputObjectsDelegate {
             let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject,
             let metadataValue = metadataObject.stringValue,
             let metadataQrCode = captureVideoPreviewLayer?.transformedMetadataObject(for: metadataObject),
-            metadataObject.type == .qr {
-            _delegate?.didCameraScan(qrcode: QRCode(value: metadataValue,
+            metadataObject.type == .qr,
+            let url = URL(string: metadataValue),
+            let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false),
+            let gist = urlComponents.queryItems?.filter({ $0.name == "gist" }).first,
+            let value = gist.value {
+
+            _delegate?.didCameraScan(qrcode: QRCode(value: value,
                                                     bounds: metadataQrCode.bounds))
 
         } else {

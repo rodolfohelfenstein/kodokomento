@@ -142,14 +142,22 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.kodokomento` struct is generated, and contains static references to 9 localization keys.
+    /// This `R.string.kodokomento` struct is generated, and contains static references to 16 localization keys.
     struct kodokomento {
       /// Value: %d COMMENTS
       static let commentsButtonText = Rswift.StringResource(key: "commentsButtonText", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: ACCESS SETTINGS
       static let cameraPermissionDeniedButton = Rswift.StringResource(key: "cameraPermissionDeniedButton", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Are you sure you want to remove the authorization from your account?
+      static let unauthorizeAlertBody = Rswift.StringResource(key: "unauthorizeAlertBody", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Authenticated!
+      static let authorizeAlertTitle = Rswift.StringResource(key: "authorizeAlertTitle", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: BE FIRST TO COMMENT!
       static let emptyCommentsButtonText = Rswift.StringResource(key: "emptyCommentsButtonText", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Cancel
+      static let unauthorizeAlertCancel = Rswift.StringResource(key: "unauthorizeAlertCancel", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Confirm
+      static let unauthorizeAlertAction = Rswift.StringResource(key: "unauthorizeAlertAction", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: GRANT PERMISSION
       static let cameraPermissionNotDeterminedButton = Rswift.StringResource(key: "cameraPermissionNotDeterminedButton", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Gist Not Found!
@@ -159,9 +167,15 @@ struct R: Rswift.Validatable {
       /// Value: Kodokomento needs camera access to scan QRCode...   Press button below to grant access
       static let cameraPermissionNotDeterminedBody = Rswift.StringResource(key: "cameraPermissionNotDeterminedBody", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Ok
+      static let authorizeAlertAction = Rswift.StringResource(key: "authorizeAlertAction", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Ok
       static let gistNotFoundAlertAction = Rswift.StringResource(key: "gistNotFoundAlertAction", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Thanks for Authentication, now you can comment on Gists!
+      static let authorizeAlertBody = Rswift.StringResource(key: "authorizeAlertBody", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: This QRCode is not a Gist and/or Gist no exists anymore
       static let gistNotFoundAlertBody = Rswift.StringResource(key: "gistNotFoundAlertBody", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Unthentication
+      static let unauthorizeAlertTitle = Rswift.StringResource(key: "unauthorizeAlertTitle", tableName: "Kodokomento", bundle: R.hostingBundle, locales: [], comment: nil)
       
       /// Value: %d COMMENTS
       static func commentsButtonText(_ value1: Int) -> String {
@@ -173,9 +187,29 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("cameraPermissionDeniedButton", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
       }
       
+      /// Value: Are you sure you want to remove the authorization from your account?
+      static func unauthorizeAlertBody(_: Void = ()) -> String {
+        return NSLocalizedString("unauthorizeAlertBody", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Authenticated!
+      static func authorizeAlertTitle(_: Void = ()) -> String {
+        return NSLocalizedString("authorizeAlertTitle", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// Value: BE FIRST TO COMMENT!
       static func emptyCommentsButtonText(_: Void = ()) -> String {
         return NSLocalizedString("emptyCommentsButtonText", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Cancel
+      static func unauthorizeAlertCancel(_: Void = ()) -> String {
+        return NSLocalizedString("unauthorizeAlertCancel", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Confirm
+      static func unauthorizeAlertAction(_: Void = ()) -> String {
+        return NSLocalizedString("unauthorizeAlertAction", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: GRANT PERMISSION
@@ -199,13 +233,28 @@ struct R: Rswift.Validatable {
       }
       
       /// Value: Ok
+      static func authorizeAlertAction(_: Void = ()) -> String {
+        return NSLocalizedString("authorizeAlertAction", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Ok
       static func gistNotFoundAlertAction(_: Void = ()) -> String {
         return NSLocalizedString("gistNotFoundAlertAction", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Thanks for Authentication, now you can comment on Gists!
+      static func authorizeAlertBody(_: Void = ()) -> String {
+        return NSLocalizedString("authorizeAlertBody", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: This QRCode is not a Gist and/or Gist no exists anymore
       static func gistNotFoundAlertBody(_: Void = ()) -> String {
         return NSLocalizedString("gistNotFoundAlertBody", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Unthentication
+      static func unauthorizeAlertTitle(_: Void = ()) -> String {
+        return NSLocalizedString("unauthorizeAlertTitle", tableName: "Kodokomento", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}

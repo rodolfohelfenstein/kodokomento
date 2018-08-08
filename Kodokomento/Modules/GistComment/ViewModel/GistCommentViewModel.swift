@@ -53,7 +53,7 @@ class GistCommentViewModel {
 
             switch response {
             case let .success(gistComments):
-                self?._gistComments = gistComments
+                self?._gistComments = gistComments.reversed()
             case .failure:
                 break
             }

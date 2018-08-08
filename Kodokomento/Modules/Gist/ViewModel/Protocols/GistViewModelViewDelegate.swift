@@ -8,4 +8,7 @@
 
 import Foundation
 
-protocol GistViewModelViewDelegate: class { }
+protocol GistViewModelViewDelegate: class {
+    func refreshAuthorizationButton()
+    func showUnauthorizeAlert(title: String, body: String, action: String, cancel: String)
+}

@@ -61,8 +61,10 @@ extension AuthenticationCoordinator: AuthenticationViewModelCoordinatorDelegate 
     }
 
     func authenticated(credential: Credential) {
-        LocalStorageHelper.accessToken = credential.accessToken
 
+        LocalStorageHelper.accessToken = credential.accessToken
         finish?(true)
+
     }
+
 }

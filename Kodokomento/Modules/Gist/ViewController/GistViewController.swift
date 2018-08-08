@@ -24,6 +24,8 @@ class GistViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        setupNavigationItem()
+
         viewModel?.viewWillAppear()
     }
 
@@ -31,11 +33,52 @@ class GistViewController: UIViewController {
 
     override var preferredStatusBarStyle: UIStatusBarStyle { return .default }
 
+    func setupNavigationItem() {
+
+        if !LocalStorageHelper.accessToken.isEmpty {
+
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh,
+                                                                target: self,
+                                                                action: #selector(unauthorizeButtonTouched(_:)))
+
+        } else {
+
+            navigationItem.rightBarButtonItem = nil
+
+        }
+
+    }
+
     // MARK: Actions
 
     @IBAction func scannerButtonTouched(_: Any) {
         viewModel?.didScannerButtonTouched()
     }
+
+    @IBAction func unauthorizeButtonTouched(_ sender: Any) {
+        viewModel?.didUnauthorizeButtonTouched()
+    }
+
 }
 
-extension GistViewController: GistViewModelViewDelegate { }
+extension GistViewController: GistViewModelViewDelegate {
+
+    func refreshAuthorizationButton() {
+        setupNavigationItem()
+    }
+
+    func showUnauthorizeAlert(title: String, body: String, action: String, cancel: String) {
+
+        let alert = UIAlertController(title: title, message: body, preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: action, style: .default, handler: { [weak self] _ in
+            self?.viewModel?.didUnautohrizeAlertButtonTouched()
+        }))
+
+        alert.addAction(UIAlertAction(title: cancel, style: .cancel, handler: nil))
+
+        present(alert, animated: true, completion: nil)
+
+    }
+
+}

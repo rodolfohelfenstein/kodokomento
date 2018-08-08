@@ -45,8 +45,8 @@
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rahav commented on Mar 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D97-bi-2GC">
                                                                     <rect key="frame" x="12" y="15.5" width="212" height="17"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <nil key="textColor"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                                    <color key="textColor" red="0.0" green="0.61176470589999998" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -102,21 +102,31 @@
                                                         <constraint firstItem="onv-Y9-GGc" firstAttribute="trailing" secondItem="Lwo-An-QMj" secondAttribute="trailing" id="xfc-Bw-SrG"/>
                                                     </constraints>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22, Ago 19" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mux-Dz-gFR">
+                                                    <rect key="frame" x="12" y="68" width="48" height="29"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Lwo-An-QMj" firstAttribute="height" secondItem="cdX-u9-8Pw" secondAttribute="height" id="2wx-K2-EGM"/>
                                                 <constraint firstAttribute="trailing" secondItem="AQS-tH-ZdN" secondAttribute="trailing" constant="12" id="3ea-MZ-Mld"/>
+                                                <constraint firstItem="Mux-Dz-gFR" firstAttribute="leading" secondItem="cdX-u9-8Pw" secondAttribute="leading" id="C1l-oW-rAr"/>
                                                 <constraint firstItem="AQS-tH-ZdN" firstAttribute="leading" secondItem="cdX-u9-8Pw" secondAttribute="trailing" constant="12" id="JXZ-c9-4dT"/>
+                                                <constraint firstItem="Mux-Dz-gFR" firstAttribute="trailing" secondItem="cdX-u9-8Pw" secondAttribute="trailing" id="JXp-iK-r8a"/>
                                                 <constraint firstItem="cdX-u9-8Pw" firstAttribute="top" secondItem="KiI-kT-L3y" secondAttribute="top" constant="16" id="Z1K-UX-BNO"/>
                                                 <constraint firstItem="cdX-u9-8Pw" firstAttribute="leading" secondItem="KiI-kT-L3y" secondAttribute="leading" constant="12" id="bde-vE-Yiq"/>
                                                 <constraint firstAttribute="bottom" secondItem="AQS-tH-ZdN" secondAttribute="bottom" id="icq-8P-76A"/>
                                                 <constraint firstItem="AQS-tH-ZdN" firstAttribute="top" secondItem="cdX-u9-8Pw" secondAttribute="top" id="pUW-rW-53Q"/>
+                                                <constraint firstItem="Mux-Dz-gFR" firstAttribute="top" secondItem="cdX-u9-8Pw" secondAttribute="bottom" constant="4" id="v23-Ag-pLn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="avatarImageView" destination="cdX-u9-8Pw" id="jGi-QC-QGF"/>
                                             <outlet property="boxView" destination="AQS-tH-ZdN" id="qNZ-ZS-cSd"/>
                                             <outlet property="commentBody" destination="NS0-0Z-vPf" id="7Zc-nh-Rjk"/>
+                                            <outlet property="commentDate" destination="Mux-Dz-gFR" id="jCE-Nz-YZF"/>
                                             <outlet property="commentTitle" destination="D97-bi-2GC" id="tvZ-hE-aOJ"/>
                                         </connections>
                                     </tableViewCell>

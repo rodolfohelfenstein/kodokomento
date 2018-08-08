@@ -6,7 +6,7 @@
 //  Copyright © 2018 Helfens Studios. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class GistCommentCoordinator: Coordinator {
 
@@ -79,13 +79,31 @@ class GistCommentCoordinator: Coordinator {
         coordinator.start()
         coordinator.finish = { [weak self] status in
             self?.removeDependency(coordinator)
-            self?.router.dismiss(animated: true)
+            self?.router.dismiss(animated: true, completion: {
 
-            if status { self?.createController?.viewModel?.didPostButtonTouched() }
+                if status {
+
+                    let alert = UIAlertController(title: R.string.kodokomento.authorizeAlertTitle(),
+                                                  message: R.string.kodokomento.authorizeAlertBody(),
+                                                  preferredStyle: .alert)
+
+                    alert.addAction(UIAlertAction(title: R.string.kodokomento.authorizeAlertAction(),
+                                                  style: .default,
+                                                  handler: { [weak self] _ in
+                                                    self?.createController?.viewModel?.didPostButtonTouched()
+                    }))
+
+                    self?.router.present(module: alert)
+
+                }
+
+            })
+
         }
 
         router.present(module: coordinator)
     }
+
 }
 
 extension GistCommentCoordinator: GistCommentViewModelCoordinatorDelegate {
